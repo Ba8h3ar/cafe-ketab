@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="کافه کتاب و محصولات فرهنگی">
+    <title>Login|کافه کتاب</title>
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="icon" type="image/png" href="./picture/images.png">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+            font-family:"Vazir Medium" ;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color:#4A2C2A ;
+        }
+        form{
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px 28px;
+            width: 400px;
+            
+        }
+        input[type="text"]{
+            width: 100%;
+            border: 1px solid #ded9ee;
+            padding: 8px;
+            border-radius: 8px;
+            color: #1b1b1b;
+            display: block;
+            transition: 180ms ease-in border-color;
+        }
+        input::placeholder{
+            color: grey;
+            font-weight: 300;
+        }
+        input:focus{
+            border-color:#89888b;
+        }
+        button[type="submit"]{
+            background-color:#4A2C2A ;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            display: block;
+            cursor: pointer;
+            width: 100%;
+            
+            
+        }
+        img{
+            display: block;
+            width: 150px;
+            margin: 0 auto;
+        }
+        .paragraph{
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <img src="./picture/images-removebg-preview.png" alt="logo">
+        <br>
+        <div class="paragraph">
+            <h3>ورود/ثبت نام</h3>
+            <p>شماره موبایل خود را وارد کنید</p>
+        </div>
+        <br>
+        <div>
+            <input type="text" placeholder="09*********" name="text" dir="ltr" maxlength="11" autofocus required>
+        </div>
+        <br>
+        <button type="submit">ورود/ثبت نام</button>
+    </form>
+</body>
+</html>

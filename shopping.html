@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="کافه کتاب و محصولات فرهنگی">
+    <title>فاکتور فروش اینترنتی</title>
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="icon" type="image/png" href="picture/images.png">
+    <style>
+        .cart_empty{
+            height: 564.213px;
+            width: 1242px;
+            margin: 24px 0 0 0;
+            padding: 10px 10px 10px 10px;
+            min-height: 564.224px;
+            border-radius: 8px;
+            box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.23);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .cart-empty-state{
+            height: 74px;
+            width: 74px;
+            max-width: 100%;
+            
+        }
+        .cart-empty-message{
+            text-align: center;
+            font-family: "Vazir Bold";
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header class="site_header">
+        <nav class="header_nav">
+            <!--لگو سایت -->
+            <div class="logo_box"><img src="./picture/images.png" alt="image" class="site_logo" ></div><br>
+            <!-- آیتم های سایت -->
+            <div class="menu_box">
+                <button class="menu_button">
+                    <a href="./home.html" class="item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 18px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                    </svg>
+                    خانه
+                </a>
+                </button>
+                
+                <button class="menu_button">
+                    <a href="./best_sellers.html" class="item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 18px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                    </svg>
+                    پرفروش ها
+                </a>
+                </button>
+                
+                <button class="menu_button">
+                    <a href="./discount.html" class="item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 18px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                    </svg>
+                     تخفیف ویژه  
+                </a>
+                </button>
+                
+                <button class="menu_button">
+                    <a href="./about_us.html" class="item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 18px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                    </svg>
+                     درباره ما
+                </a>
+                </button>
+                
+                <button class="menu_button">
+                    <a href="./contact_us.html" class="item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 18px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                    </svg>
+                     تماس با ما
+                </a>
+                </button>
+                
+            </div>
+               <br>
+               <!-- ورود و سبدخرید -->
+            <div class="user_box">
+                <button class="user_button">
+                    <a href="./login.html" class="item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 18px;">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                     ورود
+                </a>
+                </button>
+                
+                <button class="user_button">
+                    <a href="./shopping.html" class="item">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 18px;"">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+                     سبدخرید
+                </a>
+                </button>
+            </div>
+            <br>
+        </nav>
+        <br>
+    </header>
+<div class="container" style="height: 604.213px; margin-bottom: 30px;">
+    <main>
+        <div class="cart_empty">
+            <div>
+		       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cart-empty-state">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+               </svg>
+	        </div>
+            <div class="cart-empty-message">سبد خرید شما خالی است
+            </div>
+        </div>
+    </main>
+</div>
+    <footer>
+         <div class="footer_box">
+            <!--لگو سایت +بازگشت به بالا-->  
+         <div class="footer_part">
+                 <div><img src="./picture/images.png" alt="image" class="footer_logo" ></div>
+                 <div>
+                    <button class="back_button" type="button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+                       بازگشت به بالا
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" style="width: 18px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    </button>
+                 </div>
+                 
+         </div>
+            <br>
+            <div class="address_box">
+                <!--نوشته های پایین صفحه -->
+            <!-- آدرس -->
+            <div class="address">
+                <h4>آدرس</h4>
+                <ul style="list-style-type: none;">
+                   <li>اردبیل،خیابان سبلان،نبش کوچه گلستان</li> 
+                </ul>
+            </div>
+            <!-- پشتیبانی -->
+             <div class="support">
+                <h4>پشتیبانی</h4>
+                <ul style="list-style-type: none;">
+                    <li>تماس با ما:
+                        <a href="tel:+989908680364" class="tel">09908680364</a>
+                    </li>
+                    <li>
+                        روزهای کاری از ساعت9 تا17 پاسخ گوی شماهستیم
+                    </li>
+                </ul>
+             </div>
+             <!-- نماد اعتماد+شبکه اجتماعی -->
+             <div class="symbol">
+                <!-- نمادهای اعتماد -->
+                <section>
+                    <h4>نماد های اعتماد و مجوزها</h4>
+                    <div><img src="./picture/logo.png" alt="image" style="width: 75px;"></div>
+                </section>
+                <!--شبکه های اجتماعی -->
+                <section>
+                    <h4>شبکه های اجتماعی</h4>
+                    <div>
+                        <a href="./ble.html" rel="noreferrer">
+                      
+                        <img src="./picture/New-Logo-of-Bale-1030x1030.png" alt="بله" style="width: 30px;">
+                    </a>
+                    </div>
+                </section>
+             </div>
+            </div>
+             <br>
+            <div class="end_footer">
+                © تمام حقوق این وب‌سایت برای فروشگاه کافه کتاب محفوظ است.
+            </div>
+         </div>
+    </footer>
+</body>
+</html>
